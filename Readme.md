@@ -14,6 +14,11 @@ Currently using data containing 41 common plants that's stored in Postgres
 - Express
 - React
 - Typescript
+- Bootstrap
+- SCSS
+- CSS
+
+Lazy for code splitting - reduced loading time!
 
 ## User Stories
 
