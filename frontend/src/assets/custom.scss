@@ -1,5 +1,9 @@
 // redefined variables
+<<<<<<< HEAD
 $primary: #4a4e69;
+=======
+$primary: #adc178;
+>>>>>>> 2fef13a20daeda80a8041e5f864f8003d6640c31
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
@@ -21,7 +25,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .page-title {
+<<<<<<< HEAD
   font-weight: 500;
+=======
+  font-weight: 700;
+>>>>>>> 2fef13a20daeda80a8041e5f864f8003d6640c31
   margin-bottom: 1em;
   color: $primary;
   margin-top: 1em;
