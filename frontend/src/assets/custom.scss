@@ -1,0 +1,35 @@
+// redefined variables
+$primary: #adc178;
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+  "umber": #6c584c,
+  "chamoisee": #a98467,
+  "olivine": #adc178,
+  "teagreen": #dde5b6,
+  "parchment": #F0EAD2,
+  "offwhite": #f7f5f4,
+);
+
+$font-family-base: "Montserratlight";
+// Merge the color maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// all bootstrap (needs to be at bottom)
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.page-title {
+  font-weight: 700;
+  margin-bottom: 1em;
+  color: $primary;
+  margin-top: 1em;
+  letter-spacing: 3px;
+}
+
+img.header-icon {
+  width: 30px;
+  height: 40px;
+  margin-right: 1em;
+}
