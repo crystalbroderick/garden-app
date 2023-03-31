@@ -6,12 +6,14 @@ export function Navbar() {
       collapseOnSelect
       expand="sm"
       sticky="top"
-      bg="primary"
+      bg="teagreen"
       className="shadow-sm mb-3"
     >
       <Container>
         <NavbarBs.Brand to="/home" as={NavLink}>
-          Balcony Botany
+          <h3>
+            <b>Balcony Botany</b>
+          </h3>
         </NavbarBs.Brand>
         <NavbarBs.Toggle
           aria-controls="responsive-navbar-nav"
