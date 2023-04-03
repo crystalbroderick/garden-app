@@ -1,7 +1,5 @@
 # Balcony Botany
 
-## _Gardening in small areas~_
-
 Gardening app for helping city dwellers and/or people with small patios for growing their own fresh veggies, herbs, and fruit in containers.
 
 Currently using data containing 41 common plants that's stored in Postgres
