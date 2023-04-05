@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended: true })) // parse requests of content-typ
 app.use(cors({ origin: CLIENT_URL }))
 
 // FOR DEVELOPMENT:
-// db.sequelize.sync({ force: true }).then(() => {
-//   console.log("Drop and re-sync db.")
-// })
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db.")
+})
 
 db.sequelize
   .sync()

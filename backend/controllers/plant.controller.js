@@ -24,6 +24,7 @@ exports.create = (req, res) => {
     diseases: req.body.diseases,
     harvesting: req.body.harvesting,
     optimal_sun: req.body.optimal_sun,
+    img: req.body.img,
   }
 
   Plant.create(plant)

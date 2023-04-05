@@ -33,6 +33,9 @@ module.exports = (sequelize, Sequelize) => {
     harvesting: {
       type: Sequelize.STRING(1000),
     },
+    img: {
+      type: Sequelize.STRING,
+    },
   })
 
   return Plant
