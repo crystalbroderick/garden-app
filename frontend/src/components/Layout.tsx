@@ -3,13 +3,13 @@ import { Outlet } from "react-router-dom"
 import { Container } from "react-bootstrap"
 import Footer from "./Footer"
 const AppLayout = () => (
-  <div className="App">
+  <div id="page-container">
     <Navbar />
     {/* nested routes rendered here */}
-    <Container className=" border-top p-2 w-75">
+    <Container id="content-wrap">
       <Outlet />
     </Container>
-    <div className="fixed-bottom">
+    <div id="footer">
       <Footer />
     </div>
   </div>

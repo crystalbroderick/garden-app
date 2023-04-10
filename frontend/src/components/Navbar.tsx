@@ -10,7 +10,7 @@ export function Navbar() {
       className="shadow-sm mb-3"
     >
       <Container>
-        <NavbarBs.Brand to="/home" as={NavLink}>
+        <NavbarBs.Brand to="/" as={NavLink}>
           <h3>
             <b>Balcony Botany</b>
           </h3>
