@@ -7,31 +7,59 @@ import { GiCactusPot } from "react-icons/gi"
 import { IPlant } from "../types/plants"
 import { useNavigate, useParams } from "react-router-dom"
 import PlantService from "../services/plant.service"
-import { useQuery } from "@tanstack/react-query"
 
 export function PlantDetails() {
   const { id } = useParams()
-  const {
-    status: statusPlant,
-    error: errorPlant,
-    data: plant,
-  } = useQuery({
-    queryKey: ["plants", parseInt(id!)],
-    queryFn: () => PlantService.get(id!),
-  })
+  let navigate = useNavigate()
 
+  const initialPlantState = {
+    id: null,
+    name: "",
+    description: "",
+    optimal_sun: "full_sun",
+    when_to_plant: "",
+    growing_from_seed: "",
+    spacing: "",
+    watering: "",
+    other_care: "",
+    diseases: "",
+    harvesting: "",
+    planting_considerations: "",
+    img: "",
+  }
+
+  const [currentPlant, setCurrentPlant] = useState<IPlant>() || null
+  const [message, setMessage] = useState<string>("")
+
+  const getPlant = (id: string) => {
+    PlantService.get(id)
+      .then((res: any) => {
+        setCurrentPlant(res.data)
+      })
+      .catch((e: Error) => console.log(e))
+  }
+
+  useEffect(() => {
+    if (id) getPlant(id)
+  }, [id])
+
+  console.log(currentPlant)
   return (
     <Container className="plant-details-card bg-offwhite">
-      {plant && (
+      {currentPlant && (
         <>
           <Row>
             <Col sm={8}>
-              <h1>{plant.name}</h1>
-              <span>{plant.description}</span>
+              <h1>{currentPlant?.name}</h1>
+              <span>{currentPlant?.description}</span>
               <p className="text-muted">is this a vegetable?</p>
             </Col>
             <Col sm={4}>
-              <img src={plant.img} alt={plant.name} className="plant-img"></img>
+              <img
+                src={currentPlant.img}
+                alt={currentPlant.name}
+                className="plant-img"
+              ></img>
             </Col>
           </Row>
           <Row>
@@ -39,10 +67,10 @@ export function PlantDetails() {
               <h4>
                 <IoIosWater></IoIosWater>Water
               </h4>
-              {plant?.watering}{" "}
+              {currentPlant?.watering}{" "}
             </Col>
             <Col>
-              {plant.optimal_sun === "full_sun" ? (
+              {currentPlant.optimal_sun === "full_sun" ? (
                 <h4>
                   <BsFillSunFill></BsFillSunFill>
                   <p>Sun Exposure full sun (6+ hours)</p>
@@ -58,11 +86,11 @@ export function PlantDetails() {
             </Col>
           </Row>
           <h4>Spacing</h4>
-          <p>{plant.spacing}</p>
+          <p>{currentPlant.spacing}</p>
           <h4>Planting Considerations</h4>
-          <p>{plant.planting_considerations}</p>
+          <p>{currentPlant.planting_considerations}</p>
           <h4>When to Plant</h4>
-          <p>{plant.when_to_plant}</p>
+          <p>{currentPlant.when_to_plant}</p>
         </>
       )}{" "}
     </Container>
