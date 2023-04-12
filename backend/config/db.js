@@ -4,7 +4,7 @@ module.exports = {
   HOST: HOST,
   USER: "postgres",
   PASSWORD: DB_PASSWORD,
-  DB: "balconybotany",
+  DB: "garden-db",
   dialect: "postgres",
   // for sequelize connection pool config (models/index)
   pool: {
