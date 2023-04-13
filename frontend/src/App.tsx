@@ -9,6 +9,7 @@ import Plants from "./pages/Plants"
 import { PlantDetails } from "./components/PlantDetails"
 import "./assets/general.css"
 const About = lazy(() => import("./pages/About"))
+const Login = lazy(() => import("./pages/Login"))
 
 function App() {
   return (
@@ -26,6 +27,14 @@ function App() {
           }
         />
       </Route>
+      <Route
+        path="login"
+        element={
+          <Suspense fallback={<LoadingSpinner />}>
+            <Login />
+          </Suspense>
+        }
+      />
     </Routes>
   )
 }

@@ -1,6 +1,10 @@
+import { useContext } from "react"
 import { Container, Button, Nav, Navbar as NavbarBs } from "react-bootstrap"
 import { NavLink } from "react-router-dom"
+import { UserContext } from "../context/UserContext"
 export function Navbar() {
+  const { user, setUser } = useContext(UserContext)
+
   return (
     <NavbarBs
       collapseOnSelect
@@ -34,6 +38,15 @@ export function Navbar() {
             <Nav.Link to="/about" as={NavLink}>
               About
             </Nav.Link>
+            {user ? (
+              <Nav.Link to="/" as={NavLink} onClick={() => setUser(null)}>
+                Logout
+              </Nav.Link>
+            ) : (
+              <Nav.Link to="/login" as={NavLink}>
+                Login
+              </Nav.Link>
+            )}
           </Nav>
         </NavbarBs.Collapse>
       </Container>

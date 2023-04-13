@@ -28,10 +28,16 @@ export function PlantDetails() {
             <Col sm={8}>
               <h1>{plant.name}</h1>
               <span>{plant.description}</span>
-              <p className="text-muted">is this a vegetable?</p>
+              <p className="text-muted">Vegetable</p>
             </Col>
             <Col sm={4}>
-              <img src={plant.img} alt={plant.name} className="plant-img"></img>
+              {plant.img && (
+                <img
+                  src={plant.img}
+                  alt={plant.name}
+                  className="plant-img"
+                ></img>
+              )}
             </Col>
           </Row>
           <Row>
