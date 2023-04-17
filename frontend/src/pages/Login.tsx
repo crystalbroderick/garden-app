@@ -2,7 +2,6 @@ import { useState, useContext } from "react"
 import Form from "react-bootstrap/Form"
 import { onLogin } from "../services/auth.service"
 import { IUser } from "../types/user"
-import { Alert } from "react-bootstrap"
 import { UserContext } from "../context/UserContext"
 import { useNavigate } from "react-router-dom"
 function Login() {
@@ -25,7 +24,6 @@ function Login() {
         if (response.data.token) {
           localStorage.setItem("token", JSON.stringify(response.data.token))
         }
-        console.log(response.data)
         userContext.setUser({ username: values.username })
         navigate("/")
       })
@@ -35,9 +33,8 @@ function Login() {
       })
   }
 
-  //axios.post('http://localhost:8000/api/auth/login')
   return (
-    <section className="vh-100 bg-rgreen">
+    <section className="vh-100 bg-teagreen">
       <div className="container  h-100">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col col-xl-10">

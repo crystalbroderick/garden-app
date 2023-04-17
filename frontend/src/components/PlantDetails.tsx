@@ -28,7 +28,6 @@ export function PlantDetails() {
             <Col sm={8}>
               <h1>{plant.name}</h1>
               <span>{plant.description}</span>
-              <p className="text-muted">Vegetable</p>
             </Col>
             <Col sm={4}>
               {plant.img && (
@@ -49,10 +48,13 @@ export function PlantDetails() {
             </Col>
             <Col>
               {plant.optimal_sun === "full_sun" ? (
-                <h4>
-                  <BsFillSunFill></BsFillSunFill>
-                  <p>Sun Exposure full sun (6+ hours)</p>
-                </h4>
+                <>
+                  <h4>
+                    <BsFillSunFill></BsFillSunFill>
+                    Sun Exposure{" "}
+                  </h4>{" "}
+                  <p>full sun (6+ hours)</p>
+                </>
               ) : (
                 <>
                   <h4>
