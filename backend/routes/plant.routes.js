@@ -18,7 +18,7 @@ module.exports = (app) => {
   // Delete a plant with id
   router.delete("/:id", plants.delete)
 
-  // Create a new plant
+  // Delete all plants
   router.delete("/", plants.deleteAll)
 
   app.use("/api/plants", router)
