@@ -22,6 +22,16 @@ React query - less network requests!
 
 Rest API && CRUD operations
 
+## Page Screenshots / Features
+
+<img src="https://user-images.githubusercontent.com/49288075/232634381-d2b4a0f4-2858-4457-bc7a-835591e84cc8.PNG"  width=50%/>
+<img src="https://user-images.githubusercontent.com/49288075/232634386-e47e311f-72cd-435c-aa55-a83b41df9244.PNG"  width=50%/>
+<img src="https://user-images.githubusercontent.com/49288075/232634394-3867d4ce-f48f-4fdd-ada1-f27ba5465a2b.PNG"  width=50%/>
+<img src="https://user-images.githubusercontent.com/49288075/232634397-d0069f52-5c76-48f2-abaa-2d4021a94606.PNG"  width=50%/>
+<img src="https://user-images.githubusercontent.com/49288075/232633499-8d784231-c9ff-421d-8ede-24a3b133968d.PNG"   width=50%/>
+<img src="https://user-images.githubusercontent.com/49288075/232634372-b59b90b4-02f0-4a2b-9a02-88641adfc5c2.PNG"   width=50%/>
+
+
 ## User Stories
 
 - [x] As an admin, I want to access to create, read, update and delete plants in the database
